@@ -324,15 +324,13 @@
     <Compile Include="Controllers\CasaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonaController.cs" />
-    <Compile Include="SP\Logica\LogicArchivo.cs" />
-    <Compile Include="ETL\Copia.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\LogicArchivo.cs" />
+    <Compile Include="Logic\LogicCasa.cs" />
+    <Compile Include="Logic\LogicPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SP\Logica\LogicCasa.cs" />
-    <Compile Include="SP\Interfaces\ICasasp.cs" />
-    <Compile Include="SP\Logica\LogicPersona.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

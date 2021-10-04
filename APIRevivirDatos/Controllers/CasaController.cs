@@ -1,5 +1,5 @@
 ﻿using ApiRevivirDatos.Datos.Models;
-using APIRevivirDatos.SP;
+using APIRevivirDatos.Logic;
 using System;
 using System.Web.Http;
 namespace APIRevivirDatos.Controllers

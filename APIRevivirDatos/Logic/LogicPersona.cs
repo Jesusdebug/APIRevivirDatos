@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace APIRevivirDatos.SP.Logica
+namespace APIRevivirDatos.Logic
 {
     public class LogicPersona
     {
@@ -20,7 +20,7 @@ namespace APIRevivirDatos.SP.Logica
         }
         public IEnumerable<Persona> Get(int id)
         {
-            var persona = bd.Personas.Where(x=>x.IdPersona==id);
+            var persona = bd.Personas.Where(x => x.IdPersona == id);
             return persona;
         }
         public bool registrar(Persona persona)

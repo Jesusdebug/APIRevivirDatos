@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace APIRevivirDatos.Controllers
+namespace APIRevivirDatos.Logic
 {
     public class LogicArchivo
     {
         private CuidadConnection bd;
-        public LogicArchivo()
+        public  LogicArchivo()
         {
             bd = new CuidadConnection();
         }
@@ -20,7 +20,7 @@ namespace APIRevivirDatos.Controllers
         }
         public IEnumerable<Archivo> GetArchivos(int id)
         {
-            var archivos = bd.Archivos.Where(x=>x.Id==id);
+            var archivos = bd.Archivos.Where(x => x.Id == id);
             return archivos;
         }
         public bool RegistrarArchivo(Archivo archivo)
