@@ -10,5 +10,9 @@ namespace WcfServiceCity
     {
         [OperationContract]
         List<Casa> GetCasas();
+        //[OperationContract]
+        //IEnumerable<Casa> GetCasas(int id);
+        [OperationContract]
+        string GetData(int value);
     }
 }

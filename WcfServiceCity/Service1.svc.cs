@@ -20,5 +20,14 @@ namespace WcfServiceCity
             var ls = bd.Casas.ToList();
             return ls;
         }
+        //IEnumerable<Casa> IService1.GetCasas(int id)
+        //{
+        //    var ls = bd.Casas.Where(x => x.id == id);
+        //    return ls;
+        //}
+        public string GetData(int value)
+        {
+            return string.Format("You enter : {0}", value);
+        }
     }
 }
