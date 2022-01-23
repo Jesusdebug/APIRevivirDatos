@@ -7,25 +7,25 @@ namespace APIRevivirDatos.Controllers
 {
     public class ArchivoController : ApiController
     {
-        private LogicArchivo _LogicArchivo;
+        private LogicArchivo _logicFile;
         public ArchivoController()
         {
-            _LogicArchivo = new LogicArchivo();
+            _logicFile = new LogicArchivo();
         }
         [HttpGet]
         public IHttpActionResult GetLogicArchivos()
         {
-            return Ok(_LogicArchivo.GetArchivos());
+            return Ok(_logicFile.GetArchivos());
         }
         [HttpGet]
         public IHttpActionResult GetLogicArchivos(int id)
         {
-            return Ok(_LogicArchivo.GetArchivos(id));
+            return Ok(_logicFile.GetArchivos(id));
         }
         [HttpPost]
         public IHttpActionResult Post(Archivo archivo)
         {
-            bool respuesta = _LogicArchivo.RegistrarArchivo(archivo);
+            bool respuesta = _logicFile.RegistrarArchivo(archivo);
             try
             {
 

@@ -7,28 +7,28 @@ namespace APIRevivirDatos.Controllers
 {
     public class PersonaController : ApiController
     {
-        private LogicPersona _logicPersona;
+        private LogicPersona _logicPerson;
         public PersonaController()
         {
-            _logicPersona = new LogicPersona();
+            _logicPerson = new LogicPersona();
         }
         [HttpPost]
         [Route("GetAll")]
         public IHttpActionResult GetAll()
         {
-            return Ok(_logicPersona.GetAll());
+            return Ok(_logicPerson.GetAll());
         }
         [HttpPost]
         [Route("id")]
         public IHttpActionResult Get(int id)
         {
-            return Ok(_logicPersona.Get(id));
+            return Ok(_logicPerson.Get(id));
         }
         [HttpPost]
         [Route("registrar")]
         public IHttpActionResult registra(Persona persona)
         {
-            bool resultado = _logicPersona.registrar(persona);
+            bool resultado = _logicPerson.registrar(persona);
             if (resultado)
             {
                 return Ok("Exito");
@@ -44,7 +44,7 @@ namespace APIRevivirDatos.Controllers
         {
             try
             {
-                bool respuesta = _logicPersona.acturalizar(persona);
+                bool respuesta = _logicPerson.acturalizar(persona);
                 if (respuesta)
                 {
                     return Ok("Datos Acutalizados");
